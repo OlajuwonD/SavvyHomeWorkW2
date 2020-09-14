@@ -11,6 +11,14 @@ console.log(`Hello, Welcome to ${pizzaPlace}, where we have up to ${numberOfTopp
 
 if (numberOfToppings <= 10) {
   console.log("Quality, not Quantity");
-} if (numberOfToppings > 10) {
+} else {
   console.log(`"A Whole lot of Pizza"`);
 };
+
+//bonus
+for (let i = 1; i <= numberOfToppings; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+// i = 1 , 1 % 2 = 1
