@@ -5,5 +5,10 @@ const pizzaToppings = [
   "garlic",
 ];
 
-method: greetCustomer() => ("")
+for (let toppings of pizzaToppings) {
+  console.log(toppings);
+}
+let greetCustomer = `"Welcome to Pizze House, our toppings are: ${toppings}`;
+
+console.log(greetCustomer);
 
