@@ -11,10 +11,13 @@ const pizzaToppings = [
 //     //  console.log(toppings);
 // };
 
-let greetCustomer = `Welcome to Pizza House, our toppings are: ${pizzaToppings}`
-// console.log(greetCustomer);
+function greetCustomer() {
+let greeting = `Welcome to Pizza House, our toppings are: ${pizzaToppings}`
+}
+greetCustomer()
 
-const getPizzaOrder = {
+let customerOrder
+function getPizzaOrder(size, crust, ...toppings) {
   size: ["small", "medium", "large"],
   crust: ["thick", "thin"],
   toppings: [...pizzaToppings]
@@ -24,10 +27,13 @@ const getPizzaOrder = {
   console.log(`One ${getPizzaOrder.size[0]} ${getPizzaOrder.crust[1]} crust pizza with ${getPizzaOrder.toppings} coming UP!`);
 
 
-const preparePizza = {
-  size: getPizzaOrder.size,
-  crust: getPizzaOrder.crust,
-  toppings: getPizzaOrder.toppings
+function preparePizza([orderSize, orderCrust, orderToppings]) {
+  console.log("...your pizz is cooking...");
+  return {
+    size: orderSize,
+    crust: orderCrust,
+    toppings: orderToppings
+  }
 }
 
 console.log(`Cooking Pizza`, preparePizza)
